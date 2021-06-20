@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(private val apiService: ApiService): SafeApiRequest() {
 
-    suspend fun getWeatherData(accessKey: String, cityName: String): HomePageResponse {
+    suspend fun getHomepageData(): HomePageResponse {
         return apiRequest { apiService.getHomepageData() }
     }
 

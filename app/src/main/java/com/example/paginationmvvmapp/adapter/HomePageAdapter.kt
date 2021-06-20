@@ -1,14 +1,14 @@
 package com.example.paginationmvvmapp.adapter
 
-import android.se.omapi.Session
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.paginationmvvmapp.databinding.InfiniteScrollProgressbarBinding
 import com.example.paginationmvvmapp.databinding.RowLayoutMusicBinding
+import com.example.paginationmvvmapp.model.Session
 
 class HomePageAdapter(
-    private val sessions: ArrayList<Session>
+    private val sessions: List<Session>
 ) : RecyclerView.Adapter<BaseBindingViewHolder>() {
 
     private var showProgressBar = false
@@ -40,11 +40,11 @@ class HomePageAdapter(
         }
     }
 
-    fun updateAdapter(list: ArrayList<Session>) {
-        val position = sessions.size
-        sessions.addAll(list)
-        notifyItemInserted(position)
-    }
+//    fun updateAdapter(list: ArrayList<Session>) {
+//        val position = sessions.size
+//        sessions
+//        notifyItemInserted(position)
+//    }
 
     fun setShouldShowProgressBar(showProgress: Boolean) {
         this.showProgressBar = showProgress
@@ -62,9 +62,9 @@ class HomePageAdapter(
     inner class NameViewHolder(private val binding: RowLayoutMusicBinding) : BaseBindingViewHolder(binding) {
         override fun onBind(item: Any) {
             super.onBind(item)
-            binding.product = products[item as Int]
-            binding.position = item
-            binding.listener = listener
+            binding.session = sessions[item as Int]
+//            binding.position = item
+//            binding.listener = listener
             binding.executePendingBindings()
         }
     }
