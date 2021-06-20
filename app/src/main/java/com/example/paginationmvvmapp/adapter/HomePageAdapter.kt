@@ -8,7 +8,7 @@ import com.example.paginationmvvmapp.databinding.RowLayoutMusicBinding
 import com.example.paginationmvvmapp.model.Session
 
 class HomePageAdapter(
-    private val sessions: List<Session>
+    private val sessions: ArrayList<Session>
 ) : RecyclerView.Adapter<BaseBindingViewHolder>() {
 
     private var showProgressBar = false
@@ -40,11 +40,11 @@ class HomePageAdapter(
         }
     }
 
-//    fun updateAdapter(list: ArrayList<Session>) {
-//        val position = sessions.size
-//        sessions
-//        notifyItemInserted(position)
-//    }
+    fun updateAdapter(list: ArrayList<Session>) {
+        val position = sessions.size
+        sessions.addAll(list)
+        notifyItemInserted(position)
+    }
 
     fun setShouldShowProgressBar(showProgress: Boolean) {
         this.showProgressBar = showProgress
