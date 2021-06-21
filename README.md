@@ -1,5 +1,14 @@
 # PaginationMvvmApp
-PaginationMvvmApp using MVVM with functionality like pagination on grid view.
+PaginationMvvmApp using MVVM, Data Binding with functionality like pagination on grid view.
+
+## Demo
+
+- Home Page <br>
+![WhatsApp Image 2021-06-21 at 10 44 19 AM](https://user-images.githubusercontent.com/19749442/122711362-aa03fe00-d27f-11eb-81d8-1c55446d2fb1.jpeg)
+
+- Infinite loading <br>
+![WhatsApp Image 2021-06-21 at 10 53 32 AM](https://user-images.githubusercontent.com/19749442/122711326-9c4e7880-d27f-11eb-96a3-b9bc1341185f.jpeg)
+
 
 ## Gradle Dependencies
 
