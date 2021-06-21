@@ -8,67 +8,71 @@
 		<variable name="session" type="com.example.paginationmvvmapp.model.Session" />
 	</data>
 
-
-	<androidx.cardview.widget.CardView
+	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
 		android:layout_height="200dp"
-		app:cardCornerRadius="10dp"
-		app:cardElevation="4dp"
-		android:elevation="4dp"
-		android:layout_margin="10dp"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintBottom_toBottomOf="parent">
+		android:padding="10dp">
 
-		<androidx.constraintlayout.widget.ConstraintLayout
+		<androidx.cardview.widget.CardView
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:id="@+id/cl_parent"
+			android:layout_height="200dp"
+			app:cardCornerRadius="10dp"
+			app:cardElevation="4dp"
+			android:elevation="4dp"
 			app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintBottom_toBottomOf="parent">
 
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/img_background"
-				android:layout_width="0dp"
-				android:layout_height="0dp"
-				android:src="@drawable/ic_launcher_background"
-				app:layout_constraintStart_toStartOf="parent"
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/cl_parent"
 				app:layout_constraintTop_toTopOf="parent"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				android:alpha="0.75"
-				app:imageUrl="@{session.current_track.artwork_url}"/>
-
-			<TextView
-				android:id="@+id/tv_name"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:textSize="18sp"
-				android:textColor="@color/white"
-				android:fontFamily="@font/os_bold"
-				android:text="@string/name"
-				android:layout_marginStart="20dp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintBottom_toTopOf="@+id/tv_genre" />
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent">
 
-			<TextView
-				android:id="@+id/tv_genre"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginBottom="5dp"
-				android:layout_marginStart="20dp"
-				android:textSize="12sp"
-				android:textColor="@color/white"
-				android:fontFamily="@font/os_semibold"
-				android:layout_marginTop="5dp"
-				android:text="@{session.genreString}"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintStart_toStartOf="parent" />
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/img_background"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:src="@drawable/ic_launcher_background"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					android:alpha="0.75"
+					app:imageUrl="@{session.current_track.artwork_url}"/>
+
+				<TextView
+					android:id="@+id/tv_name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textSize="18sp"
+					android:textColor="@color/white"
+					android:fontFamily="@font/os_bold"
+					android:text="@string/name"
+					android:layout_marginStart="20dp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintBottom_toTopOf="@+id/tv_genre" />
+
+				<TextView
+					android:id="@+id/tv_genre"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="5dp"
+					android:layout_marginStart="20dp"
+					android:textSize="12sp"
+					android:textColor="@color/white"
+					android:fontFamily="@font/os_semibold"
+					android:layout_marginTop="5dp"
+					android:text="@{session.genreString}"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent" />
 
 
-		</androidx.constraintlayout.widget.ConstraintLayout>
-	</androidx.cardview.widget.CardView>
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		</androidx.cardview.widget.CardView>
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
